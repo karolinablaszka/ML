@@ -8,7 +8,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn import metrics 
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_squared_error, r2_score
 
 diabetes = datasets.load_diabetes()
 X, y = diabetes.data, diabetes.target
@@ -26,6 +26,10 @@ mse = mean_squared_error(y_test, y_pred)
 rmse = np.sqrt(mse)
 print('Dummy RMSE:', rmse)
 
+#squared
+r_squared = r2_score(y_test, y_pred)
+print('R-squared:', r_squared)
+
 #LinearRegression
 lin_reg = LinearRegression()
 # fit on the training data
@@ -36,3 +40,7 @@ y_pred = lin_reg.predict(X_test)
 mse = mean_squared_error(y_test, y_pred)
 lin_rmse = np.sqrt(mse)
 print('Lin_reg RMSE:', lin_rmse)
+
+#squared
+r_squared_lin = r2_score(y_test, y_pred)
+print('R-squared_lin:', r_squared_lin )
