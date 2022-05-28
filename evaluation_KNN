@@ -1,0 +1,6 @@
+import numpy as np
+from sklearn.dummy import DummyClassifier
+from sklearn.datasets import load_wine
+
+data = load_wine()
+print(data)
