@@ -1,0 +1,14 @@
+environment.yml
+name: ML
+channels:
+- defaults
+- conda-forge
+dependencies:
+- python== ?????
+- pandas
+- pytest
+- isort
+- pre-commit
+- flake8
+- pip
+- matplotlib
